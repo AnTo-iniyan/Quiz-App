@@ -26,7 +26,7 @@ class _QuestionScreen extends State<QuestionScreen> {
             ),
           ),
         ),
-        ...currentQuestion.answers.map((answer) {
+        ...currentQuestion.getShuffledAnswers().map((answer) {
           return Container(
             // height: 90,
             padding: const EdgeInsets.only(top: 30),

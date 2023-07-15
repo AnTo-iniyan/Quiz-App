@@ -36,7 +36,7 @@ class button extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          padding: EdgeInsets.symmetric(vertical: 25, horizontal: 40)
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40)
         ),
         onPressed: onPress,
         icon: Icon(
