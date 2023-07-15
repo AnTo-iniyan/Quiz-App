@@ -29,13 +29,14 @@ class button extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      width: screenWidth-40,
+      width: screenWidth-60,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xff3c1053),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
+          padding: EdgeInsets.symmetric(vertical: 25, horizontal: 40)
         ),
         onPressed: onPress,
         icon: Icon(

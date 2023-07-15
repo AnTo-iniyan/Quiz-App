@@ -10,7 +10,6 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreen extends State<QuestionScreen> {
-
   @override
   Widget build(context) {
     final currentQuestion = questions[0];
@@ -27,42 +26,17 @@ class _QuestionScreen extends State<QuestionScreen> {
             ),
           ),
         ),
-        Container(
-          height: 120,
-          padding: const EdgeInsets.only(top: 70),
-          child: button(
-            text: currentQuestion.answers[0],
-            size: 20,
-            onPress: () {},
-          ),
-        ),
-        Container(
-          height: 90,
-          padding: const EdgeInsets.only(top: 40),
-          child: button(
-            text: currentQuestion.answers[1],
-            size: 20,
-            onPress: () {},
-          ),
-        ),
-        Container(
-          height: 90,
-          padding: const EdgeInsets.only(top: 40),
-          child: button(
-            text: currentQuestion.answers[2],
-            size: 20,
-            onPress: () {},
-          ),
-        ),
-        Container(
-          height: 90,
-          padding: const EdgeInsets.only(top: 40),
-          child: button(
-            text: currentQuestion.answers[3],
-            size: 20,
-            onPress: () {},
-          ),
-        ),
+        ...currentQuestion.answers.map((answer) {
+          return Container(
+            // height: 90,
+            padding: const EdgeInsets.only(top: 30),
+            child: button(
+              text: answer,
+              size: 20,
+              onPress: () {},
+            ),
+          );
+        }),
       ],
     );
   }

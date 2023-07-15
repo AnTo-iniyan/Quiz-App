@@ -58,8 +58,8 @@ class _homePageState extends State<homePage> {
                 margin: const EdgeInsets.only(
                   top: 230,
                 ),
-                height: 55,
-                width: 155,
+                // height: 55,
+                width: 255,
                 child: button(
                   text: 'Start Quiz',
                   size: 20,
